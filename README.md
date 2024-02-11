@@ -26,7 +26,6 @@ pip install pexpect neopixel
 
 1. Run the script:
 
-bash
 python Liontron_BMS_Reader.py
 
 
