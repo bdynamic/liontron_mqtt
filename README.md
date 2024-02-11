@@ -26,7 +26,7 @@ pip install pexpect neopixel
 
 1. Run the script:
 
-python Liontron_BMS_Reader.py
+python battery.py
 
 
 2. The script will connect to the BMS, read data, and store it in a file called `data.json`. The battery load will also be calculated and stored in the database.
