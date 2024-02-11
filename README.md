@@ -24,9 +24,9 @@ pip install pexpect neopixel
 
 ## Usage
 
-1. Run the script:
+1. Include the script:
 
-python battery.py
+from battery import Battery
 
 
 2. The script will connect to the BMS, read data, and store it in a file called `data.json`. The battery load will also be calculated and stored in the database.
