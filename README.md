@@ -14,7 +14,7 @@ This Python script reads data from a Liontron BMS over BLE and stores it in a JS
 
 1. Install the required libraries:
 
-```bash
+
 pip install pexpect neopixel
 
 
