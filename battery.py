@@ -7,7 +7,8 @@ import pexpect
 class Battery(LED):
 	
 	
-	def __init__(self):
+	def __init__(self, MAC):
+		self._MAC = MAC
 		
 		return
 		
