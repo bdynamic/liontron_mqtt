@@ -1,7 +1,3 @@
-from LED import LED
-import sqlite3
-import neopixel as neo
-import readConfig as rc
 import subprocess
 import os
 import json
@@ -11,10 +7,7 @@ import pexpect
 class Battery(LED):
 	
 	
-	def __init__(self, pin):
-		super().__init__(pin)
-		print("Starting LED for battery...")
-		self._LEDSetup()
+	def __init__(self):
 		
 		return
 		
