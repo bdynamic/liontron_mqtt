@@ -6,8 +6,6 @@ This Python script reads data from a Liontron BMS over BLE and stores it in a JS
 
 * Python 3.x
 * `pexpect` library
-* `neopixel` library
-* `readConfig` library (not provided in the code)
 * A Raspberry Pi or other compatible device with Bluetooth LE
 
 ## Setup
@@ -15,12 +13,8 @@ This Python script reads data from a Liontron BMS over BLE and stores it in a JS
 1. Install the required libraries:
 
 
-pip install pexpect neopixel
+pip install pexpect
 
-
-2. Replace the `readConfig` library with your own implementation to read configuration values such as the MAC address of the BMS.
-
-3. Configure the script with your desired settings, such as the pin for the LED indicator.
 
 ## Usage
 
@@ -31,13 +25,6 @@ from battery import Battery
 
 2. The script will connect to the BMS, read data, and store it in a file called `data.json`. The battery load will also be calculated and stored in the database.
 
-## LED Indicator
-
-The script uses an LED to indicate the battery level. The LED will be:
-
-* Green: Battery level is above 80%
-* Yellow: Battery level is between 50% and 80%
-* Red: Battery level is below 50%
 
 ## Data
 
@@ -58,9 +45,6 @@ The script stores the following data in the `data.json` file:
 * ... (voltages of all cells)
 * Name: Name of the BMS
 
-## Database
-
-The script stores the battery load in a database. The specific database implementation is not provided in the code and needs to be implemented separately.
 
 ## Disclaimer
 
