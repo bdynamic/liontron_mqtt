@@ -13,7 +13,11 @@ This Python script reads data from a Liontron BMS over BLE and stores it in a JS
 1. Install the required libraries:
 
 
-pip install pexpect
+
+- pip install pexpect
+
+2. Retrieve the MAC address of the battery
+    
 
 
 ## Usage
