@@ -166,7 +166,7 @@ def main():
                     if "error" in data:
                         raise RuntimeError(data["error"])
 
-                    power = abs(data.get("Imain")) * data.get("Vmain")
+                    power = data.get("Imain") * data.get("Vmain")
                     data["Power"] = power
 
                     name = data.get("Name", mac.replace(":", "").lower())
