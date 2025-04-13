@@ -103,6 +103,8 @@ def publish_all(client, base_topic, device_name, data, retain=True):
             unit = "Ah"
         elif key == "SoC":
             unit = "%"
+        elif key == "Power":
+            unit = "W"
 
         payload = build_discovery_payload(device_name, state_topic, key, availability_topic, unit)
         client.publish(discovery_topic, json.dumps(payload), retain=True)
@@ -163,6 +165,10 @@ def main():
                     data = bms.getBatteryload()
                     if "error" in data:
                         raise RuntimeError(data["error"])
+
+                    power = abs(data.get("Imain")) * data.get("Vmain")
+                    data["Power"] = power
+
                     name = data.get("Name", mac.replace(":", "").lower())
                     device_name = f"{vendor}_{name}"
                     logging.info(f"Publishing data for {device_name}")
