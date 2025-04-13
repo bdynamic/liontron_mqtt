@@ -13,6 +13,9 @@ It includes:
 - ✅ Multiple battery support
 - 🪫 Automatic Home Assistant updates on reboot or crash
 
+
+<img src="./img/pic_homeassistant.png" alt="Example Homeassistant" style="width:200px;"/>
+
 ---
 
 ## 📚 Credits
