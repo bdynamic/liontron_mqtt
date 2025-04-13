@@ -21,16 +21,16 @@ class Battery:
 
         for attempt in range(10):
             try:
-                logging.debug(f"BMS connecting (Try: {attempt+1})")  # ✅ was print
+                logging.debug(f"BMS connecting (Try: {attempt+1})")  
                 child.sendline("connect")
                 child.expect("Connection successful", timeout=1)
             except pexpect.TIMEOUT:
                 continue
             else:
-                logging.debug("BMS connection successful")  # ✅ was print
+                logging.debug("BMS connection successful")  
                 break
         else:
-            logging.debug("BMS Connect timeout! Exit")  # ✅ was print
+            logging.debug("BMS Connect timeout! Exit")  
             child.sendline("exit")
             return -1
 
@@ -182,7 +182,7 @@ def main() -> None:
     """
     Main function to test the library
     """
-    logging.basicConfig(level=logging.DEBUG)  # ✅ add this line
+    logging.basicConfig(level=logging.DEBUG) 
     MAC = "A4:AA:BB:CC:DD:EE"  #100Ah
     bat1 = Battery(MAC)
     logging.debug(bat1.getBatteryload()) 
